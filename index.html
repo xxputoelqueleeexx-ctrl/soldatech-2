@@ -1448,7 +1448,14 @@
       img.src = `https://cdn.akamai.steamstatic.com/steam/apps/${p.appid}/header.jpg`;
       img.alt = p.title;
       img.loading = "lazy";
-      img.addEventListener("error", () => { img.remove(); wrap.textContent = monogram(p.title); });
+      img.addEventListener("load", () => {
+        if (p.imgOk !== true){ p.imgOk = true; scheduleRerender(); }
+      });
+      img.addEventListener("error", () => {
+        img.remove();
+        wrap.textContent = monogram(p.title);
+        if (p.imgOk !== false){ p.imgOk = false; scheduleRerender(); }
+      });
       wrap.appendChild(img);
     } else {
       wrap.textContent = monogram(p.title);
@@ -1647,6 +1654,14 @@
   });
 
   /* ---- render catalog ---- */
+  let rerenderTimer = null;
+  function scheduleRerender(){
+    // Reordena la grilla una vez que se van confirmando imágenes cargadas,
+    // agrupando varias confirmaciones en un solo re-render (evita parpadeos).
+    if (rerenderTimer) return;
+    rerenderTimer = setTimeout(() => { rerenderTimer = null; renderPlatform(); }, 400);
+  }
+
   function renderPlatform(){
     let list = products.filter(p => p.platform.toLowerCase() === currentPlatform);
 
@@ -1657,11 +1672,17 @@
     if (sortOrder === "price-asc") list = list.slice().sort((a,b) => a.price - b.price);
     else if (sortOrder === "price-desc") list = list.slice().sort((a,b) => b.price - a.price);
 
-    // Juegos con imagen (portada de Steam) primero. Se usa un sort estable,
-    // así que dentro de cada grupo (con/sin imagen) se conserva el orden
-    // que ya tenía la lista (relevancia o precio según corresponda).
-    const hasImg = p => p.platform === "PC" && !!p.appid;
-    list = list.slice().sort((a,b) => (hasImg(b) ? 1 : 0) - (hasImg(a) ? 1 : 0));
+    // Los juegos con imagen (portada de Steam) confirmada van primero,
+    // luego los que todavía no confirmaron (pero tienen appid para intentar
+    // cargar), y al final los que no tienen imagen. Sort estable, así que
+    // dentro de cada grupo se conserva el orden previo (relevancia o precio).
+    const canHaveImg = p => p.platform === "PC" && !!p.appid;
+    function imgScore(p){
+      if (p.imgOk === true) return 2;   // imagen confirmada arriba de todo
+      if (p.imgOk === false) return 0;  // confirmado que no tiene imagen, al final
+      return canHaveImg(p) ? 1 : 0;     // aún sin confirmar: en el medio si tiene appid
+    }
+    list = list.slice().sort((a,b) => imgScore(b) - imgScore(a));
 
     grid.innerHTML = "";
     countLabel.textContent = list.length + " productos";
