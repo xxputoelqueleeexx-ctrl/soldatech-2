@@ -1,0 +1,1215 @@
+﻿{
+    "project":  "LowPrice Gaming",
+    "currency":  "ARS",
+    "whatsapp":  "5491170611914",
+    "newsletter":  "localStorage",
+    "products":  [
+                     {
+                         "title":  "Dragon Ball: Sparking! Zero Legendary Edition",
+                         "platform":  "PC",
+                         "old":  10500,
+                         "price":  11550,
+                         "appid":  1790600,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Forza Horizon 6 Premium Edition",
+                         "platform":  "PC",
+                         "old":  12500,
+                         "price":  13750,
+                         "appid":  2483190,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Crimson Desert Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  12700,
+                         "price":  13970,
+                         "appid":  3321460,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "The Last of Us Bundle",
+                         "platform":  "PC",
+                         "old":  13200,
+                         "price":  14520,
+                         "appid":  1888930,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Resident Evil Requiem Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  12499,
+                         "price":  13749,
+                         "appid":  3764200,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "Ea Sports Fc 26",
+                         "platform":  "PC",
+                         "old":  12600,
+                         "price":  13860,
+                         "appid":  3405690,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Marvels Spider-Man 2 Digital Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  11099,
+                         "price":  12209,
+                         "appid":  2651280,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "Black Myth: Wukong Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  8999,
+                         "price":  9899,
+                         "appid":  2358720,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Beast of Reincarnation Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  8999,
+                         "price":  9899,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "ZERO PARADES: For Dead Spies",
+                         "platform":  "PC",
+                         "old":  4500,
+                         "price":  4950,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Ea Sports Fc 27 PC Steam Preventa",
+                         "platform":  "PC",
+                         "old":  17999,
+                         "price":  19799,
+                         "appid":  4080220,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Halo: Campaign Evolved Premium Edition",
+                         "platform":  "PC",
+                         "old":  10299,
+                         "price":  11329,
+                         "appid":  2806050,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Echoes of Aincrad Ultimate Edition",
+                         "platform":  "PC",
+                         "old":  10599,
+                         "price":  11659,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Assassin\\\u0027s Creed Black Flag Resynced Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  14399,
+                         "price":  15839,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "MECCHA CHAMELEON",
+                         "platform":  "PC",
+                         "old":  2299,
+                         "price":  2529,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Marvel Spiderman Remastered + Miles Morales",
+                         "platform":  "PC",
+                         "old":  8499,
+                         "price":  9349,
+                         "appid":  1817070,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Project Zomboid",
+                         "platform":  "PC",
+                         "old":  2999,
+                         "price":  3299,
+                         "appid":  108600,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Left 4 Dead 2",
+                         "platform":  "PC",
+                         "old":  1800,
+                         "price":  1980,
+                         "appid":  550,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Minecraft Bedrock Edition Pc Microsoft",
+                         "platform":  "PC",
+                         "old":  5850,
+                         "price":  6435,
+                         "genre":  "Simulacion"
+                     },
+                     {
+                         "title":  "Game Pass X3 Meses",
+                         "platform":  "PC",
+                         "old":  8905,
+                         "price":  9796,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Party Animals",
+                         "platform":  "PC",
+                         "old":  4450,
+                         "price":  4895,
+                         "appid":  1260320,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Borderlands 4 Super Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  10500,
+                         "price":  11550,
+                         "appid":  1285190,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Halo: The Master Chief Collection",
+                         "platform":  "PC",
+                         "old":  4190,
+                         "price":  4609,
+                         "appid":  976730,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Subnautica: Below Zero",
+                         "platform":  "PC",
+                         "old":  2350,
+                         "price":  2585,
+                         "appid":  848450,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Mafia: The Old Country Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  10399,
+                         "price":  11439,
+                         "appid":  1941540,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "ZERO Sievert",
+                         "platform":  "PC",
+                         "old":  2550,
+                         "price":  2805,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Overcooked! 2",
+                         "platform":  "PC",
+                         "old":  2590,
+                         "price":  2849,
+                         "appid":  728880,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Deep Rock Galactic Ultimate Edition Microsoft",
+                         "platform":  "PC",
+                         "old":  1850,
+                         "price":  2035,
+                         "appid":  548430,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "God Of War",
+                         "platform":  "PC",
+                         "old":  6750,
+                         "price":  7425,
+                         "appid":  1593500,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "PEAK",
+                         "platform":  "PC",
+                         "old":  2050,
+                         "price":  2255,
+                         "appid":  3527290,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "LEGO Batman: Legacy of the Dark Knight Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  11500,
+                         "price":  12650,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "eFootball PES 2021 Season Update Standard Edition",
+                         "platform":  "PC",
+                         "old":  5850,
+                         "price":  6435,
+                         "appid":  1259970,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Garrys Mod",
+                         "platform":  "PC",
+                         "old":  2090,
+                         "price":  2299,
+                         "appid":  4000,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Euro Truck Simulator 2 Ultimate Edition",
+                         "platform":  "PC",
+                         "old":  4490,
+                         "price":  4939,
+                         "appid":  227300,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Farming Simulator 25 Year 1 Bundle Pc Microsoft",
+                         "platform":  "PC",
+                         "old":  4599,
+                         "price":  5059,
+                         "appid":  2300320,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Resident Evil 4 Remake Gold Edition",
+                         "platform":  "PC",
+                         "old":  7999,
+                         "price":  8799,
+                         "appid":  2050650,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "Backrooms: Escape Together",
+                         "platform":  "PC",
+                         "old":  2500,
+                         "price":  2750,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "A Way Out",
+                         "platform":  "PC",
+                         "old":  3199,
+                         "price":  3519,
+                         "appid":  1222700,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Geometry Dash",
+                         "platform":  "PC",
+                         "old":  2090,
+                         "price":  2299,
+                         "appid":  322170,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Ea Sports Fc 25",
+                         "platform":  "PC",
+                         "old":  9099,
+                         "price":  10009,
+                         "appid":  2669320,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Streamer Life Simulator 2",
+                         "platform":  "PC",
+                         "old":  2550,
+                         "price":  2805,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "BeamNG.drive",
+                         "platform":  "PC",
+                         "old":  4600,
+                         "price":  5060,
+                         "appid":  284160,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Split Fiction",
+                         "platform":  "PC",
+                         "old":  8450,
+                         "price":  9295,
+                         "appid":  2001120,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Terraria",
+                         "platform":  "PC",
+                         "old":  2190,
+                         "price":  2409,
+                         "appid":  105600,
+                         "genre":  "Simulacion"
+                     },
+                     {
+                         "title":  "The Crew Motorfest Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  4490,
+                         "price":  4939,
+                         "appid":  2698940,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "TCG Card Shop Simulator",
+                         "platform":  "PC",
+                         "old":  2299,
+                         "price":  2529,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Yakuza Kiwami 3 \u0026 Dark Ties Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  9099,
+                         "price":  10009,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "HumanitZ",
+                         "platform":  "PC",
+                         "old":  3450,
+                         "price":  3795,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Super Meat Boy 3D",
+                         "platform":  "PC",
+                         "old":  3890,
+                         "price":  4279,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Nioh 3 Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  11099,
+                         "price":  12209,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "House Flipper Remastered Collection",
+                         "platform":  "PC",
+                         "old":  4750,
+                         "price":  5225,
+                         "genre":  "Simulacion"
+                     },
+                     {
+                         "title":  "DayZ Cool Edition Pc Microsoft",
+                         "platform":  "PC",
+                         "old":  5999,
+                         "price":  6599,
+                         "appid":  221100,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Among Us Pc Microsoft",
+                         "platform":  "PC",
+                         "old":  1750,
+                         "price":  1925,
+                         "appid":  945360,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Heroes of Might and Magic: Olden Era",
+                         "platform":  "PC",
+                         "old":  4250,
+                         "price":  4675,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Mina the Hollower",
+                         "platform":  "PC",
+                         "old":  3999,
+                         "price":  4399,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Code Vein II Ultimate Edition",
+                         "platform":  "PC",
+                         "old":  11400,
+                         "price":  12540,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Cult of the Lamb: The Fate of the Lambs",
+                         "platform":  "PC",
+                         "old":  4490,
+                         "price":  4939,
+                         "appid":  1313140,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Microsoft Flight Simulator 2024 Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  11600,
+                         "price":  12760,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Red Dead Redemption",
+                         "platform":  "PC",
+                         "old":  8190,
+                         "price":  9009,
+                         "appid":  2668510,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "Assassins Creed Shadows Digital Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  9550,
+                         "price":  10505,
+                         "appid":  3159330,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "Baldurs Gate 3",
+                         "platform":  "PC",
+                         "old":  8999,
+                         "price":  9899,
+                         "appid":  1086940,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "WWE 2K26 Attitude Era Edition",
+                         "platform":  "PC",
+                         "old":  14900,
+                         "price":  16390,
+                         "appid":  3717070,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "NBA 2K26 Superstar Edition",
+                         "platform":  "PC",
+                         "old":  12699,
+                         "price":  13969,
+                         "appid":  3472040,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Batman: Arkham Collection",
+                         "platform":  "PC",
+                         "old":  3750,
+                         "price":  4125,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "Horizon Forbidden West Complete Edition",
+                         "platform":  "PC",
+                         "old":  6750,
+                         "price":  7425,
+                         "appid":  2420110,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "Cyberpunk 2077 Ultimate Edition",
+                         "platform":  "PC",
+                         "old":  10999,
+                         "price":  12099,
+                         "appid":  1091500,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "Elden Ring Shadow of the Erdtree Edition",
+                         "platform":  "PC",
+                         "old":  11800,
+                         "price":  12980,
+                         "appid":  1245620,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "Hogwarts Legacy Digital Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  7800,
+                         "price":  8580,
+                         "appid":  990080,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "Grand Theft Auto V Premium Edition",
+                         "platform":  "PC",
+                         "old":  4200,
+                         "price":  4620,
+                         "appid":  271590,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Red Dead Redemption 2 Ultimate Edition",
+                         "platform":  "PC",
+                         "old":  7500,
+                         "price":  8250,
+                         "appid":  1174180,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "God of War RagnarÃ¶k Digital Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  9800,
+                         "price":  10780,
+                         "appid":  2322010,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "Rust",
+                         "platform":  "PC",
+                         "old":  5400,
+                         "price":  5940,
+                         "appid":  252490,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "ARK: Survival Ascended",
+                         "platform":  "PC",
+                         "old":  6900,
+                         "price":  7590,
+                         "appid":  2399830,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Sons Of The Forest",
+                         "platform":  "PC",
+                         "old":  4300,
+                         "price":  4730,
+                         "appid":  1326470,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "The Witcher 3: Wild Hunt Complete Edition",
+                         "platform":  "PC",
+                         "old":  3500,
+                         "price":  3850,
+                         "appid":  292030,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "Dark Souls III Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  8200,
+                         "price":  9020,
+                         "appid":  374320,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Sekiro: Shadows Die Twice GOTY Edition",
+                         "platform":  "PC",
+                         "old":  7900,
+                         "price":  8690,
+                         "appid":  814380,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Arma Reforger",
+                         "platform":  "PC",
+                         "old":  5100,
+                         "price":  5610,
+                         "appid":  1874880,
+                         "genre":  "Accion"
+                     },
+                     {
+                         "title":  "Ready or Not",
+                         "platform":  "PC",
+                         "old":  6200,
+                         "price":  6820,
+                         "appid":  1144200,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "S.T.A.L.K.E.R. 2: Heart of Chornobyl Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  10500,
+                         "price":  11550,
+                         "appid":  1643320,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Phasmophobia",
+                         "platform":  "PC",
+                         "old":  2800,
+                         "price":  3080,
+                         "appid":  739630,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "Lethal Company",
+                         "platform":  "PC",
+                         "old":  1950,
+                         "price":  2145,
+                         "appid":  1966720,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "Content Warning",
+                         "platform":  "PC",
+                         "old":  1850,
+                         "price":  2035,
+                         "appid":  2881650,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Palworld",
+                         "platform":  "PC",
+                         "old":  4900,
+                         "price":  5390,
+                         "appid":  1623730,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Helldivers 2 Super Citizen Edition",
+                         "platform":  "PC",
+                         "old":  8500,
+                         "price":  9350,
+                         "appid":  553850,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Counter-Strike Prime Status Upgrade",
+                         "platform":  "PC",
+                         "old":  3200,
+                         "price":  3520,
+                         "appid":  730,
+                         "genre":  "Accion"
+                     },
+                     {
+                         "title":  "Sea of Thieves 2024 Edition",
+                         "platform":  "PC",
+                         "old":  5600,
+                         "price":  6160,
+                         "appid":  1172620,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Forza Horizon 5 Premium Edition",
+                         "platform":  "PC",
+                         "old":  9500,
+                         "price":  10450,
+                         "appid":  1551360,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Assetto Corsa Competizione",
+                         "platform":  "PC",
+                         "old":  3900,
+                         "price":  4290,
+                         "appid":  805550,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "City Driver",
+                         "platform":  "PC",
+                         "old":  2900,
+                         "price":  3190,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Need for Speed Unbound Palace Edition",
+                         "platform":  "PC",
+                         "old":  5200,
+                         "price":  5720,
+                         "appid":  1846380,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "F1 25 Championship Edition",
+                         "platform":  "PC",
+                         "old":  13500,
+                         "price":  14850,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Mortal Kombat 1 Premium Edition",
+                         "platform":  "PC",
+                         "old":  9200,
+                         "price":  10120,
+                         "appid":  1971870,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Street Fighter 6 Ultimate Edition",
+                         "platform":  "PC",
+                         "old":  9900,
+                         "price":  10890,
+                         "appid":  1364780,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Tekken 8 Ultimate Edition",
+                         "platform":  "PC",
+                         "old":  10800,
+                         "price":  11880,
+                         "appid":  1778820,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Dragon Ball FighterZ Ultimate Edition",
+                         "platform":  "PC",
+                         "old":  4100,
+                         "price":  4510,
+                         "appid":  678950,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Naruto x Boruto Ultimate Ninja STORM CONNECTIONS",
+                         "platform":  "PC",
+                         "old":  6800,
+                         "price":  7480,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles",
+                         "platform":  "PC",
+                         "old":  5700,
+                         "price":  6270,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Persona 3 Reload Digital Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  9100,
+                         "price":  10010,
+                         "appid":  2161700,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Persona 5 Royal",
+                         "platform":  "PC",
+                         "old":  6400,
+                         "price":  7040,
+                         "appid":  1687950,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Final Fantasy VII Remake Intergrade",
+                         "platform":  "PC",
+                         "old":  8700,
+                         "price":  9570,
+                         "appid":  1462040,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Monster Hunter Wilds Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  12200,
+                         "price":  13420,
+                         "appid":  2246340,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Monster Hunter: World Iceborne Master Edition",
+                         "platform":  "PC",
+                         "old":  4800,
+                         "price":  5280,
+                         "appid":  582010,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Devil May Cry 5 + Vergil",
+                         "platform":  "PC",
+                         "old":  3600,
+                         "price":  3960,
+                         "appid":  601150,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Resident Evil 2 Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  3900,
+                         "price":  4290,
+                         "appid":  883710,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "Resident Evil 3",
+                         "platform":  "PC",
+                         "old":  3400,
+                         "price":  3740,
+                         "appid":  952060,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "Resident Evil Village Gold Edition",
+                         "platform":  "PC",
+                         "old":  5800,
+                         "price":  6380,
+                         "appid":  1196590,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "Dead Space Remake",
+                         "platform":  "PC",
+                         "old":  6500,
+                         "price":  7150,
+                         "appid":  1693980,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "Silent Hill 2 Remake Deluxe Edition",
+                         "platform":  "PC",
+                         "old":  9900,
+                         "price":  10890,
+                         "appid":  2124490,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "The Outlast Trials",
+                         "platform":  "PC",
+                         "old":  4600,
+                         "price":  5060,
+                         "appid":  1304930,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "Dead by Daylight Gold Edition",
+                         "platform":  "PC",
+                         "old":  4200,
+                         "price":  4620,
+                         "appid":  381210,
+                         "genre":  "Terror"
+                     },
+                     {
+                         "title":  "It Takes Two",
+                         "platform":  "PC",
+                         "old":  4100,
+                         "price":  4510,
+                         "appid":  1426210,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Stardew Valley",
+                         "platform":  "PC",
+                         "old":  1600,
+                         "price":  1760,
+                         "appid":  413150,
+                         "genre":  "Simulacion"
+                     },
+                     {
+                         "title":  "Factorio",
+                         "platform":  "PC",
+                         "old":  3800,
+                         "price":  4180,
+                         "appid":  427520,
+                         "genre":  "Simulacion"
+                     },
+                     {
+                         "title":  "RimWorld",
+                         "platform":  "PC",
+                         "old":  4500,
+                         "price":  4950,
+                         "appid":  294100,
+                         "genre":  "Simulacion"
+                     },
+                     {
+                         "title":  "Cities: Skylines II Ultimate Edition",
+                         "platform":  "PC",
+                         "old":  8900,
+                         "price":  9790,
+                         "appid":  949230,
+                         "genre":  "Simulacion"
+                     },
+                     {
+                         "title":  "Civilization VI Anthology",
+                         "platform":  "PC",
+                         "old":  4300,
+                         "price":  4730,
+                         "appid":  289070,
+                         "genre":  "Estrategia"
+                     },
+                     {
+                         "title":  "Age of Empires IV: Anniversary Edition",
+                         "platform":  "PC",
+                         "old":  5200,
+                         "price":  5720,
+                         "appid":  1466860,
+                         "genre":  "Estrategia"
+                     },
+                     {
+                         "title":  "Hearts of Iron IV Cadet Edition",
+                         "platform":  "PC",
+                         "old":  3700,
+                         "price":  4070,
+                         "appid":  394360,
+                         "genre":  "Estrategia"
+                     },
+                     {
+                         "title":  "Stellaris Galaxy Edition",
+                         "platform":  "PC",
+                         "old":  3900,
+                         "price":  4290,
+                         "appid":  281990,
+                         "genre":  "Estrategia"
+                     },
+                     {
+                         "title":  "Crusader Kings III Royal Edition",
+                         "platform":  "PC",
+                         "old":  7400,
+                         "price":  8140,
+                         "appid":  1158310,
+                         "genre":  "Estrategia"
+                     },
+                     {
+                         "title":  "Mount \u0026 Blade II: Bannerlord",
+                         "platform":  "PC",
+                         "old":  5800,
+                         "price":  6380,
+                         "appid":  261550,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Total War: WARHAMMER III",
+                         "platform":  "PC",
+                         "old":  8100,
+                         "price":  8910,
+                         "appid":  1142710,
+                         "genre":  "Estrategia"
+                     },
+                     {
+                         "title":  "Manor Lords",
+                         "platform":  "PC",
+                         "old":  4200,
+                         "price":  4620,
+                         "appid":  1363080,
+                         "genre":  "Estrategia"
+                     },
+                     {
+                         "title":  "Enshrouded",
+                         "platform":  "PC",
+                         "old":  4100,
+                         "price":  4510,
+                         "appid":  1203620,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Valheim",
+                         "platform":  "PC",
+                         "old":  2900,
+                         "price":  3190,
+                         "appid":  892970,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Raft",
+                         "platform":  "PC",
+                         "old":  2700,
+                         "price":  2970,
+                         "appid":  648800,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Unturned Gold Upgrade",
+                         "platform":  "PC",
+                         "old":  1200,
+                         "price":  1320,
+                         "appid":  304930,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "7 Days to Die",
+                         "platform":  "PC",
+                         "old":  3600,
+                         "price":  3960,
+                         "appid":  251570,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Scum",
+                         "platform":  "PC",
+                         "old":  4300,
+                         "price":  4730,
+                         "appid":  513710,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "DayZ",
+                         "platform":  "PC",
+                         "old":  5500,
+                         "price":  6050,
+                         "appid":  221100,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Escape from Tarkov Arena Standard Edition",
+                         "platform":  "PC",
+                         "old":  8500,
+                         "price":  9350,
+                         "genre":  "Accion"
+                     },
+                     {
+                         "title":  "Squad",
+                         "platform":  "PC",
+                         "old":  5900,
+                         "price":  6490,
+                         "appid":  393380,
+                         "genre":  "Accion"
+                     },
+                     {
+                         "title":  "Hell Let Loose",
+                         "platform":  "PC",
+                         "old":  5200,
+                         "price":  5720,
+                         "appid":  686810,
+                         "genre":  "Accion"
+                     },
+                     {
+                         "title":  "Insurgency: Sandstorm",
+                         "platform":  "PC",
+                         "old":  3100,
+                         "price":  3410,
+                         "appid":  581320,
+                         "genre":  "Accion"
+                     },
+                     {
+                         "title":  "Battlefield 2042 Elite Edition",
+                         "platform":  "PC",
+                         "old":  6200,
+                         "price":  6820,
+                         "appid":  1517290,
+                         "genre":  "Accion"
+                     },
+                     {
+                         "title":  "Call of Duty: Modern Warfare III Vault Edition",
+                         "platform":  "PC",
+                         "old":  14500,
+                         "price":  15950,
+                         "appid":  2519060,
+                         "genre":  "Accion"
+                     },
+                     {
+                         "title":  "Call of Duty: Warzone Pro Pack",
+                         "platform":  "PC",
+                         "old":  4900,
+                         "price":  5390,
+                         "genre":  "Accion"
+                     },
+                     {
+                         "title":  "Payday 3 Silver Edition",
+                         "platform":  "PC",
+                         "old":  6800,
+                         "price":  7480,
+                         "appid":  1272080,
+                         "genre":  "Accion"
+                     },
+                     {
+                         "title":  "Crime Boss: Rockay City",
+                         "platform":  "PC",
+                         "old":  3500,
+                         "price":  3850,
+                         "appid":  1927870,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "UFC 5",
+                         "platform":  "Xbox",
+                         "old":  10500,
+                         "price":  11550,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Forza Horizon 5",
+                         "platform":  "Xbox",
+                         "old":  8400,
+                         "price":  9240,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "EA SPORTS FC 24",
+                         "platform":  "Xbox",
+                         "old":  7799,
+                         "price":  8579,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "UFC 4",
+                         "platform":  "Xbox",
+                         "old":  3299,
+                         "price":  3629,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Mortal Kombat 11",
+                         "platform":  "Xbox",
+                         "old":  2500,
+                         "price":  2750,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "Crash Bandicoot N. Sane Trilogy",
+                         "platform":  "Xbox",
+                         "old":  6430,
+                         "price":  7073,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "STAR WARS Jedi: Survivor",
+                         "platform":  "Xbox",
+                         "old":  4500,
+                         "price":  4950,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Mafia: Definitive Edition",
+                         "platform":  "Xbox",
+                         "old":  4250,
+                         "price":  4675,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "Far Cry Anthology Bundle",
+                         "platform":  "Xbox",
+                         "old":  13099,
+                         "price":  14409,
+                         "genre":  "Otros"
+                     },
+                     {
+                         "title":  "EA SPORTS FC 25",
+                         "platform":  "Xbox",
+                         "old":  5299,
+                         "price":  5829,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Red Dead Redemption 2",
+                         "platform":  "Xbox",
+                         "old":  8899,
+                         "price":  9789,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "GTA V Premium Edition",
+                         "platform":  "Xbox",
+                         "old":  6250,
+                         "price":  6875,
+                         "genre":  "Accion y aventura"
+                     },
+                     {
+                         "title":  "F1 24",
+                         "platform":  "Xbox",
+                         "old":  6500,
+                         "price":  7150,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "DRAGON BALL Sparking! ZERO",
+                         "platform":  "Xbox",
+                         "old":  9599,
+                         "price":  10559,
+                         "genre":  "RPG y lucha"
+                     },
+                     {
+                         "title":  "NBA 2K25",
+                         "platform":  "Xbox",
+                         "old":  8500,
+                         "price":  9350,
+                         "genre":  "Deportes y carreras"
+                     },
+                     {
+                         "title":  "Assassin\\\u0027s Creed Shadows",
+                         "platform":  "Xbox",
+                         "old":  10999,
+                         "price":  12099,
+                         "genre":  "Accion y aventura"
+                     }
+                 ],
+    "mercadopagoCheckoutUrl":  "",
+    "mercadoPagoAlias":  "Txs1234",
+    "mercadoPagoHolder":  "Patricio Nicolas Delgado"
+}
