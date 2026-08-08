@@ -1,0 +1,1756 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LowPrice Gaming – Juegos digitales al mejor precio</title>
+<meta name="description" content="Claves digitales de juegos para PC y Xbox. Entrega y activación al instante, sin esperas ni intermediarios.">
+<style>
+  :root{
+    --bg: #0a0a0c;
+    --bg-panel: #111114;
+    --bg-card: #17171b;
+    --yellow: #f5c518;
+    --yellow-dark: #d9a800;
+    --white: #f5f5f5;
+    --gray: #9a9aa2;
+    --gray-dim: #6b6b73;
+    --red: #e23b3b;
+    --border: #232327;
+  }
+  html[data-theme="light"]{
+    --bg: #f1f0ea;
+    --bg-panel: #fbfaf6;
+    --bg-card: #ffffff;
+    --white: #15150f;
+    --gray: #5b5a50;
+    --gray-dim: #83816f;
+    --border: #ddd9c9;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background .15s ease, color .15s ease;
+  }
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  img{max-width:100%; display:block;}
+  button{font-family:inherit;}
+  .container{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- TOP BAR ---------- */
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 32px;
+    max-width:1240px;
+    margin:0 auto;
+    gap:24px;
+    position:sticky; top:0; z-index:30;
+    background:var(--bg);
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:800;
+    font-size:20px;
+    letter-spacing:0.5px;
+    white-space:nowrap;
+  }
+  .logo-badge{
+    width:38px; height:38px;
+    background: linear-gradient(135deg, var(--yellow), var(--yellow-dark));
+    border-radius:9px;
+    display:flex; align-items:center; justify-content:center;
+    color:#111;
+    font-weight:900;
+    font-size:18px;
+    position:relative;
+    flex-shrink:0;
+  }
+  .logo-badge::after{
+    content:"✦";
+    position:absolute;
+    top:-4px; right:-4px;
+    font-size:12px;
+    color:var(--yellow);
+  }
+  .logo-text .low{color:var(--white);}
+  .logo-text .price{color:var(--yellow);}
+  .logo-sub{
+    display:block;
+    font-size:9px;
+    letter-spacing:3px;
+    color:var(--gray-dim);
+    font-weight:600;
+  }
+  .search-bar{
+    flex:1;
+    max-width:420px;
+    display:flex;
+    align-items:center;
+    background: var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:10px 16px;
+    gap:10px;
+    color: var(--gray-dim);
+  }
+  .search-bar input{
+    background:none;
+    border:none;
+    outline:none;
+    color:var(--white);
+    font-size:14px;
+    width:100%;
+  }
+  .search-bar input::placeholder{color:var(--gray-dim);}
+  .topbar-actions{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    font-size:14px;
+    white-space:nowrap;
+  }
+  .topbar-actions .action{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    background:none;
+    border:none;
+    color:inherit;
+  }
+  .cart-badge{
+    position:relative;
+  }
+  .cart-count{
+    position:absolute;
+    top:-8px; right:-10px;
+    background:var(--yellow);
+    color:#111;
+    font-size:10px;
+    font-weight:800;
+    width:16px; height:16px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .theme-btn{
+    width:36px; height:36px;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:none;
+    cursor:pointer;
+    font-size:15px;
+    color:var(--white);
+  }
+  .theme-btn:hover{border-color:var(--yellow);}
+  .menu-btn{
+    display:none;
+    width:36px; height:36px;
+    align-items:center; justify-content:center;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:none;
+    cursor:pointer;
+    color:var(--white);
+    font-size:16px;
+  }
+
+  /* ---------- NAV ---------- */
+  .nav-wrap{
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    position:sticky; top:75px; z-index:29; background:var(--bg);
+  }
+  .nav{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .nav-links{
+    display:flex;
+    gap:34px;
+  }
+  .nav-links li a{
+    display:block;
+    padding:16px 0;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.4px;
+    color:var(--gray);
+    border-bottom:2px solid transparent;
+    transition: color .15s;
+    cursor:pointer;
+    background:none;
+    border-top:none; border-left:none; border-right:none;
+  }
+  .nav-links li a:hover{color:var(--white);}
+  .nav-links li.active a{
+    color:var(--yellow);
+    border-bottom-color:var(--yellow);
+  }
+  .categorias-btn{
+    background:var(--yellow);
+    color:#111;
+    font-weight:800;
+    font-size:13px;
+    letter-spacing:0.4px;
+    padding:14px 22px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    border:none;
+  }
+
+  @media(max-width:760px){
+    .nav-links{display:none;}
+    .search-bar{display:none;}
+    .menu-btn{display:flex;}
+  }
+
+  /* ---------- MOBILE NAV ---------- */
+  .mobile-nav-overlay{
+    position:fixed; inset:0; background:rgba(0,0,0,0.5);
+    z-index:49; opacity:0; pointer-events:none; transition:opacity .2s ease;
+  }
+  .mobile-nav-overlay.open{opacity:1; pointer-events:auto;}
+  .mobile-nav{
+    position:fixed; top:0; right:0; bottom:0;
+    width:min(80vw, 300px);
+    background:var(--bg-panel);
+    border-left:1px solid var(--border);
+    z-index:50;
+    transform:translateX(100%);
+    transition:transform .2s ease;
+    display:flex; flex-direction:column;
+    padding:22px 24px;
+  }
+  .mobile-nav.open{transform:translateX(0);}
+  .mobile-nav-header{display:flex; align-items:center; justify-content:space-between; margin-bottom:28px;}
+  .mobile-nav-close{
+    width:34px; height:34px; border:1px solid var(--border); border-radius:8px;
+    background:none; color:var(--white); font-size:16px; cursor:pointer;
+  }
+  .mobile-nav ul{display:flex; flex-direction:column; gap:2px;}
+  .mobile-nav ul a{
+    display:block; padding:14px 4px; font-size:15px; color:var(--white);
+    border-bottom:1px solid var(--border); cursor:pointer;
+    background:none; border-top:none; border-left:none; border-right:none; width:100%; text-align:left;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    max-width:1240px;
+    margin:24px auto 0;
+    padding:0 32px;
+  }
+  .hero-inner{
+    position:relative;
+    background: linear-gradient(120deg, var(--bg-panel) 40%, var(--bg-card) 100%);
+    border-radius:14px;
+    overflow:hidden;
+    min-height:420px;
+    display:flex;
+    align-items:center;
+  }
+  .hero-diagonal{
+    position:absolute;
+    top:0; right:0;
+    width:55%;
+    height:100%;
+    background: linear-gradient(100deg, transparent 0%, rgba(245,197,24,0.18) 35%, rgba(245,197,24,0.35) 100%);
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 10% 100%);
+  }
+  .hero-figure{
+    position:absolute;
+    right:0; bottom:0;
+    height:100%;
+    width:52%;
+    background:
+      radial-gradient(ellipse at 60% 40%, rgba(245,197,24,0.15), transparent 60%),
+      linear-gradient(180deg, #232326, #0d0d0f 80%);
+    overflow:hidden;
+  }
+  .hero-figure::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg, rgba(17,17,20,0.92) 0%, rgba(17,17,20,0.2) 48%, rgba(245,197,24,0.2) 100%);
+  }
+  .hero-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    opacity:0.82;
+    filter:saturate(0.9) contrast(1.05);
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    padding:56px 0 56px 56px;
+    max-width:520px;
+  }
+  .hero-content h1{
+    font-size:44px;
+    line-height:1.12;
+    font-weight:900;
+    letter-spacing:-0.5px;
+    text-transform:uppercase;
+  }
+  .hero-content h1 .accent{color:var(--yellow);}
+  .hero-content p{
+    margin-top:18px;
+    color:var(--gray);
+    font-size:14px;
+    line-height:1.7;
+    font-weight:600;
+    letter-spacing:0.3px;
+  }
+  .btn-primary{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:26px;
+    background: var(--yellow);
+    color:#111;
+    font-weight:800;
+    font-size:14px;
+    padding:14px 26px;
+    border-radius:6px;
+    border:none;
+    cursor:pointer;
+    letter-spacing:0.3px;
+  }
+
+  @media(max-width:760px){
+    .hero-figure{width:100%; opacity:0.25;}
+    .hero-content{padding:36px 24px; max-width:100%;}
+    .hero-content h1{font-size:30px;}
+  }
+
+  /* ---------- FEATURES STRIP ---------- */
+  .features{
+    max-width:1240px;
+    margin:38px auto 0;
+    padding:30px 32px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+  }
+  .feature{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .feature-icon{
+    width:44px; height:44px;
+    border:1.5px solid var(--yellow);
+    border-radius:9px;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--yellow);
+    flex-shrink:0;
+  }
+  .feature h4{
+    font-size:12.5px;
+    letter-spacing:0.3px;
+    margin-bottom:4px;
+  }
+  .feature p{
+    font-size:12px;
+    color:var(--gray-dim);
+    line-height:1.4;
+  }
+  @media(max-width:1080px){ .features{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:760px){ .features{grid-template-columns:1fr;} }
+
+  /* ---------- SECTION HEADER ---------- */
+  .section{
+    max-width:1240px;
+    margin:0 auto;
+    padding:44px 32px 0;
+  }
+  .section-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:22px;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .section-head h2{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:19px;
+    letter-spacing:0.4px;
+    font-weight:800;
+  }
+  .section-head h2::after{
+    content:"";
+    display:inline-block;
+    width:44px; height:3px;
+    background:var(--yellow);
+    border-radius:2px;
+  }
+  .section-head .ver-todas{
+    color:var(--yellow);
+    font-size:12.5px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:4px;
+    white-space:nowrap;
+    background:none; border:none; cursor:pointer;
+  }
+
+  /* ---------- CATALOG TOOLBAR ---------- */
+  .catalog-toolbar{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+  }
+  .catalog-search{
+    flex:1;
+    min-width:200px;
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:11px 16px;
+    color:var(--white);
+    font-size:13px;
+    outline:none;
+  }
+  .catalog-search:focus{border-color:var(--yellow);}
+  .catalog-search::placeholder{color:var(--gray-dim);}
+  .sort-select{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:11px 14px;
+    color:var(--white);
+    font-size:12.5px;
+    cursor:pointer;
+    outline:none;
+  }
+  .sort-select:focus{border-color:var(--yellow);}
+
+  .tabs{
+    display:flex;
+    gap:8px;
+    margin-bottom:24px;
+  }
+  .tab{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    color:var(--gray);
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:0.4px;
+    padding:10px 20px;
+    border-radius:7px;
+    cursor:pointer;
+    text-transform:uppercase;
+  }
+  .tab.active{
+    background:var(--yellow);
+    border-color:var(--yellow);
+    color:#111;
+  }
+  .product-count{
+    font-size:12px;
+    color:var(--gray-dim);
+  }
+
+  /* ---------- GAME GRID ---------- */
+  .game-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+  }
+  .game-card{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    cursor:pointer;
+    transition: transform .12s ease, border-color .12s ease;
+  }
+  .game-card:hover{
+    border-color:var(--yellow);
+    transform:translateY(-2px);
+  }
+  .game-cover{
+    position:relative;
+    aspect-ratio: 16/9;
+    display:flex;
+    align-items:flex-end;
+    padding:14px;
+    color:#fff;
+    font-weight:800;
+    font-size:15px;
+    line-height:1.2;
+    text-shadow:0 2px 6px rgba(0,0,0,0.6);
+    overflow:hidden;
+  }
+  .game-cover img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+  }
+  .discount-badge{
+    position:absolute;
+    top:10px; left:10px;
+    background:var(--yellow);
+    color:#111;
+    font-size:11px;
+    font-weight:900;
+    padding:3px 8px;
+    border-radius:4px;
+    z-index:2;
+  }
+  .platform-badge{
+    position:absolute;
+    bottom:10px; left:10px;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:0.4px;
+    text-transform:uppercase;
+    background:rgba(0,0,0,0.6);
+    color:var(--yellow);
+    padding:4px 8px;
+    border-radius:5px;
+    z-index:2;
+  }
+  .game-info{
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+  }
+  .game-info h3{
+    font-size:13.5px;
+    font-weight:700;
+    margin-bottom:8px;
+    line-height:1.3;
+    flex-grow:1;
+  }
+  .price-row{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    margin-bottom:12px;
+    flex-wrap:wrap;
+  }
+  .price-now{
+    color:var(--yellow);
+    font-weight:800;
+    font-size:15px;
+  }
+  .price-old{
+    color:var(--gray-dim);
+    font-size:12px;
+    text-decoration:line-through;
+  }
+  .btn-buy{
+    width:100%;
+    background:var(--yellow);
+    color:#111;
+    font-weight:800;
+    font-size:12.5px;
+    letter-spacing:0.4px;
+    padding:10px;
+    border-radius:6px;
+    border:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+  }
+  .btn-buy:hover{background:var(--yellow-dark);}
+
+  .empty-msg{
+    grid-column:1/-1;
+    padding:50px 20px;
+    text-align:center;
+    color:var(--gray-dim);
+    font-size:13px;
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:10px;
+  }
+
+  @media (max-width:1080px){ .game-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:640px){ .game-grid{grid-template-columns:repeat(2,1fr);} }
+
+  /* cover gradients (placeholders, no copyrighted art) */
+  .cover-0{background:linear-gradient(160deg,#3a2f1e,#0e0d0a 70%);}
+  .cover-1{background:linear-gradient(160deg,#5c1c1c,#1a0a0a 70%);}
+  .cover-2{background:linear-gradient(160deg,#3b1414,#120707 70%);}
+  .cover-3{background:linear-gradient(160deg,#1c2b3a,#070c10 70%);}
+  .cover-4{background:linear-gradient(160deg,#123319,#04140a 70%);}
+  .cover-5{background:linear-gradient(160deg,#2a1f3d,#0b0714 70%);}
+  .cover-6{background:linear-gradient(160deg,#1f1f1f,#050505 70%);}
+  .cover-7{background:linear-gradient(160deg,#402a12,#100a03 70%);}
+  .cover-8{background:linear-gradient(160deg,#1a2a2a,#050c0c 70%);}
+  .cover-9{background:linear-gradient(160deg,#33131f,#0d0409 70%);}
+
+  /* ---------- NEWSLETTER ---------- */
+  .newsletter{
+    max-width:1240px;
+    margin:52px auto 0;
+    padding:32px;
+  }
+  .newsletter-inner{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:34px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+  .newsletter-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+  }
+  .newsletter-icon{
+    width:52px; height:52px;
+    border-radius:50%;
+    background:var(--yellow);
+    display:flex; align-items:center; justify-content:center;
+    color:#111;
+    flex-shrink:0;
+  }
+  .newsletter-left h3{
+    font-size:17px;
+    font-weight:800;
+  }
+  .newsletter-left h3 .accent{color:var(--yellow);}
+  .newsletter-left p{
+    font-size:12.5px;
+    color:var(--gray-dim);
+    margin-top:4px;
+  }
+  .newsletter-form{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+  }
+  .newsletter-form input{
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:7px;
+    padding:12px 16px;
+    color:var(--white);
+    font-size:13px;
+    min-width:230px;
+    outline:none;
+  }
+  .newsletter-form input::placeholder{color:var(--gray-dim);}
+  .newsletter-form button{
+    background:var(--yellow);
+    color:#111;
+    font-weight:800;
+    font-size:13px;
+    padding:12px 22px;
+    border-radius:7px;
+    border:none;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .newsletter-status{
+    width:100%;
+    color:var(--gray-dim);
+    font-size:12px;
+    line-height:1.4;
+  }
+  .newsletter-status.success{color:#76d68a;}
+  .newsletter-status.error{color:var(--red);}
+  .payment-data{
+    margin-top:14px;
+    padding:14px;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:7px;
+    font-size:12px;
+    line-height:1.7;
+  }
+  .payment-data strong{color:var(--yellow);}
+  .payment-data button{margin-top:8px; padding:7px 10px; border:1px solid var(--yellow); border-radius:5px; background:none; color:var(--yellow); cursor:pointer; font-size:11px;}
+  .payment-proof{display:block; margin-top:10px; color:var(--gray); font-size:11px;}
+  .payment-proof input{display:block; margin-top:5px; max-width:100%; font-size:11px;}
+  .filter-select{min-width:150px;}
+  .info-section{max-width:1240px; margin:0 auto; padding:44px 32px 0;}
+  .info-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .info-panel{background:var(--bg-panel); border:1px solid var(--border); border-radius:10px; padding:24px;}
+  .info-panel h2{font-size:18px; margin-bottom:16px;}
+  .info-panel details{border-top:1px solid var(--border); padding:12px 0; color:var(--gray); font-size:13px; line-height:1.5;}
+  .info-panel summary{color:var(--white); cursor:pointer; font-weight:700;}
+  .contact-list{display:flex; flex-direction:column; gap:12px; color:var(--gray); font-size:13px;}
+  .contact-list a{color:var(--yellow);}
+  @media(max-width:760px){ .info-grid{grid-template-columns:1fr;} }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    margin-top:56px;
+    border-top:1px solid var(--border);
+    padding:48px 32px 0;
+  }
+  .footer-grid{
+    max-width:1240px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.6fr 1fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:36px;
+  }
+  .footer-brand p{
+    color:var(--gray-dim);
+    font-size:12.5px;
+    line-height:1.7;
+    margin:16px 0 20px;
+    max-width:230px;
+  }
+  .footer-social{
+    display:flex;
+    gap:12px;
+  }
+  .footer-social span{
+    width:32px; height:32px;
+    border-radius:50%;
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--gray);
+  }
+  .footer-col h5{
+    font-size:12px;
+    letter-spacing:0.6px;
+    color:var(--gray-dim);
+    margin-bottom:18px;
+    font-weight:700;
+  }
+  .footer-col li{margin-bottom:12px;}
+  .footer-col li a, .footer-col li button{
+    font-size:13px;
+    color:var(--gray);
+    background:none; border:none; cursor:pointer; padding:0; font-family:inherit;
+  }
+  .footer-col li a:hover, .footer-col li button:hover{color:var(--yellow);}
+  .payment-icons{
+    display:flex;
+    gap:10px;
+    margin-top:16px;
+    flex-wrap:wrap;
+  }
+  .payment-icons span{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:8px 12px;
+    font-size:11px;
+    font-weight:700;
+    color:var(--gray);
+  }
+  .footer-bottom{
+    border-top:1px solid var(--border);
+    padding:20px 0;
+    max-width:1240px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:12px;
+    color:var(--gray-dim);
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .region-pill{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:6px 14px;
+  }
+
+  @media (max-width:1080px){ .footer-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:760px){ .footer-grid{grid-template-columns:1fr;} .newsletter-inner{flex-direction:column; align-items:flex-start;} }
+
+  /* ---------- MODALS ---------- */
+  .modal-overlay{
+    display:none;
+    position:fixed; inset:0;
+    background:rgba(0,0,0,0.6);
+    align-items:center; justify-content:center;
+    padding:24px;
+    z-index:60;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal{
+    background:var(--bg-card);
+    border:1px solid var(--border);
+    max-width:520px; width:100%;
+    max-height:88vh; overflow-y:auto;
+    border-radius:12px;
+    position:relative;
+  }
+  .modal .game-cover{aspect-ratio:16/9;}
+  .modal-close{
+    position:absolute; top:14px; right:14px;
+    width:32px; height:32px;
+    border:1px solid rgba(255,255,255,0.4);
+    border-radius:8px;
+    background:rgba(0,0,0,0.4);
+    color:#fff;
+    font-size:16px;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer;
+    z-index:3;
+  }
+  .modal-body{padding:22px 24px 26px;}
+  .modal-body h3{font-size:20px; font-weight:800; margin:6px 0 10px;}
+  .modal-body .desc{font-size:13px; color:var(--gray-dim); line-height:1.6; margin-bottom:20px;}
+  .modal-body .stub{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:16px; border-top:1px solid var(--border);
+    gap:16px; flex-wrap:wrap;
+  }
+  .modal-body .btn-buy{width:auto; padding:12px 24px;}
+
+  /* ---------- CART ---------- */
+  .cart-item{display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid var(--border);}
+  .cart-item:last-child{border-bottom:none;}
+  .cart-item .thumb-mini{
+    width:56px; height:56px; border-radius:6px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; font-size:12px; color:#fff; overflow:hidden;
+  }
+  .cart-item .thumb-mini img{width:100%; height:100%; object-fit:cover;}
+  .cart-item-info{flex-grow:1; min-width:0;}
+  .cart-item-info h4{font-size:13px; font-weight:700; margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .cart-item-info span{font-size:10.5px; color:var(--gray-dim); text-transform:uppercase; letter-spacing:0.3px;}
+  .qty-control{display:flex; align-items:center; gap:8px; font-size:13px;}
+  .qty-btn{
+    width:22px; height:22px; border:1px solid var(--border); background:none;
+    cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--white);
+    border-radius:4px;
+  }
+  .qty-btn:hover{border-color:var(--yellow);}
+  .cart-item-price{font-size:13px; font-weight:800; color:var(--yellow); min-width:74px; text-align:right;}
+  .cart-remove{background:none; border:none; color:var(--gray-dim); cursor:pointer; font-size:14px; padding:4px;}
+  .cart-remove:hover{color:var(--red);}
+  .cart-empty{padding:44px 0; text-align:center; color:var(--gray-dim); font-size:13px; line-height:1.6;}
+  .cart-notice{
+    margin-top:16px; padding:14px 16px;
+    border:1px solid var(--border); border-radius:8px; background:var(--bg-panel);
+  }
+  .cart-notice p{font-size:12px; color:var(--gray-dim); margin:0 0 6px;}
+  .cart-notice ul{display:flex; flex-direction:column; gap:5px; font-size:11.5px; color:var(--gray-dim);}
+  .cart-footer{border-top:1px solid var(--border); margin-top:10px; padding-top:16px; display:flex; align-items:center; justify-content:space-between;}
+  .cart-total{font-size:18px; font-weight:800; color:var(--yellow);}
+  .checkout-btn{
+    background:var(--yellow); color:#111; padding:12px 22px; font-size:13.5px; font-weight:800;
+    border-radius:7px; border:none; cursor:pointer;
+  }
+  .checkout-btn:hover{background:var(--yellow-dark);}
+
+  /* ---------- TERMS ---------- */
+  .terms-text{display:flex; flex-direction:column; gap:14px; font-size:13px; color:var(--gray-dim); line-height:1.6;}
+  .terms-text strong{color:var(--white);}
+</style>
+</head>
+<body>
+
+<!-- MODAL: producto -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal-close" id="modal-close" aria-label="Cerrar">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<!-- MODAL: carrito -->
+<div class="modal-overlay" id="cart-overlay">
+  <div class="modal">
+    <button class="modal-close" id="cart-close" aria-label="Cerrar">✕</button>
+    <div class="modal-body">
+      <h3 style="margin-bottom:16px;">Tu carrito</h3>
+      <div id="cart-content"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: términos -->
+<div class="modal-overlay" id="terms-overlay">
+  <div class="modal">
+    <button class="modal-close" id="terms-close" aria-label="Cerrar">✕</button>
+    <div class="modal-body">
+      <h3 style="margin-bottom:16px;">Términos y condiciones</h3>
+      <div class="terms-text">
+        <p><strong>Cuentas NFA (Not Full Access):</strong> todas las claves se entregan mediante cuentas compartidas, con acceso limitado. No representan la propiedad total ni exclusiva de la cuenta.</p>
+        <p><strong>Pérdida de acceso:</strong> si el comprador cambia la contraseña o modifica cualquier dato de la cuenta (email de recuperación, verificación en dos pasos, métodos de pago, etc.), el acceso se pierde automáticamente. LowPrice Gaming no se hace responsable en ese caso ni ofrece reposición.</p>
+        <p><strong>Garantía:</strong> 24 horas desde el momento de la compra. Dentro de ese plazo, si la cuenta presenta fallas ajenas al comprador, se repone el acceso sin cargo. Pasado ese plazo, no se realizan reposiciones ni reembolsos.</p>
+        <p><strong>Restricciones de uso:</strong> no se puede vincular métodos de pago propios ni utilizar las opciones de recuperación de cuenta. El uso está limitado a jugar el título adquirido.</p>
+        <p><strong>Sin transferencia de propiedad:</strong> la compra no incluye la titularidad del juego ni de la cuenta, ni logros o progreso vinculados a un perfil personal.</p>
+        <p><strong>Entrega:</strong> la activación se coordina por WhatsApp una vez confirmado el pedido desde el carrito.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-header">
+    <div class="logo">
+      <div class="logo-badge">LP</div>
+      <div class="logo-text"><span class="low">LOW</span><span class="price">PRICE</span></div>
+    </div>
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Cerrar menú">✕</button>
+  </div>
+  <ul>
+    <li><a data-scroll="#catalogo">Juegos</a></li>
+    <li><a data-scroll="#catalogo">Ofertas</a></li>
+    <li><a id="mobile-terms-link">Términos y condiciones</a></li>
+    <li><a id="mobile-cart-link">Carrito (<span id="mobile-cart-count">0</span>)</a></li>
+  </ul>
+</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="logo">
+    <div class="logo-badge">LP</div>
+    <div class="logo-text">
+      <span class="low">LOW</span><span class="price">PRICE</span>
+      <span class="logo-sub">GAMING</span>
+    </div>
+  </div>
+  <div class="search-bar">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="header-search" placeholder="Buscar juegos...">
+  </div>
+  <div class="topbar-actions">
+    <button class="theme-btn" id="theme-toggle" aria-label="Cambiar tema">☾</button>
+    <button class="action" id="cart-btn" style="position:relative;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span>Carrito</span>
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+    <button class="menu-btn" id="menu-btn" aria-label="Abrir menú">☰</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nav">
+    <ul class="nav-links">
+      <li class="active"><a href="#">INICIO</a></li>
+      <li><a data-scroll="#catalogo">JUEGOS</a></li>
+      <li><a data-scroll="#catalogo">OFERTAS</a></li>
+      <li><a id="terms-link-nav">TÉRMINOS</a></li>
+      <li><a href="#">SOPORTE</a></li>
+    </ul>
+    <div class="categorias-btn" id="categorias-btn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      CATEGORÍAS
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-diagonal"></div>
+    <div class="hero-figure">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=85" alt="Setup gamer con luces amarillas">
+    </div>
+    <div class="hero-content">
+      <h1>JUEGOS DIGITALES<br>AL <span class="accent">MEJOR PRECIO</span></h1>
+      <p>CÓDIGOS 100% ORIGINALES<br>ENTREGA INMEDIATA</p>
+      <button class="btn-primary" id="hero-cta">
+        VER OFERTAS
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+  <div class="feature">
+    <div class="feature-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    </div>
+    <div>
+      <h4>ENTREGA INMEDIATA</h4>
+      <p>Recibe tu juego al instante por email</p>
+    </div>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+    </div>
+    <div>
+      <h4>CÓDIGOS 100% ORIGINALES</h4>
+      <p>Trabajamos solo con distribuidores oficiales</p>
+    </div>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+    </div>
+    <div>
+      <h4>PRECIOS BAJOS</h4>
+      <p>Los mejores precios del mercado</p>
+    </div>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+    </div>
+    <div>
+      <h4>SOPORTE 24/7</h4>
+      <p>Estamos siempre para ayudarte</p>
+    </div>
+  </div>
+</div>
+
+<!-- CATÁLOGO (dinámico, con todo el stock de Soldatech) -->
+<div class="section" id="catalogo">
+  <div class="section-head">
+    <h2>CATÁLOGO</h2>
+    <span class="product-count" id="product-count">0 productos</span>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-platform="pc">PC</button>
+    <button class="tab" data-platform="xbox">XBOX</button>
+  </div>
+
+  <div class="catalog-toolbar">
+    <input type="text" class="catalog-search" id="catalog-search" placeholder="Buscar juego...">
+    <select class="sort-select filter-select" id="genre-filter" aria-label="Filtrar por g�nero">
+      <option value="all">Todos los g�neros</option>
+    </select>
+    <select class="sort-select filter-select" id="price-filter" aria-label="Filtrar por precio">
+      <option value="all">Cualquier precio</option>
+      <option value="0-5000">Hasta ARS $5.000</option>
+      <option value="5000-10000">ARS $5.000 a $10.000</option>
+      <option value="10000-999999">M�s de ARS $10.000</option>
+    </select>
+    <select class="sort-select" id="sort-select">
+      <option value="default">Orden: relevancia</option>
+      <option value="price-asc">Precio: menor a mayor</option>
+      <option value="price-desc">Precio: mayor a menor</option>
+    </select>
+  </div>
+
+  <div class="game-grid" id="product-grid"></div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-left">
+      <div class="newsletter-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+      </div>
+      <div>
+        <h3>SUSCRIBITE Y RECIBÍ LAS <span class="accent">MEJORES OFERTAS</span></h3>
+        <p>Descuentos exclusivos y novedades en tu email</p>
+      </div>
+    </div>
+    <form class="newsletter-form" id="newsletter-form">
+      <input type="email" id="newsletter-email" placeholder="Ingresa tu email..." autocomplete="email" required>
+      <button type="submit">SUSCRIBIRME</button>
+      <p class="newsletter-status" id="newsletter-status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<!-- FAQ Y CONTACTO -->
+<section class="info-section" id="ayuda">
+  <div class="info-grid">
+    <div class="info-panel">
+      <h2>PREGUNTAS FRECUENTES</h2>
+      <details><summary>�C�mo recibo mi compra?</summary><p>Despu�s de confirmar el pago, coordinamos la activaci�n por WhatsApp.</p></details>
+      <details><summary>�Qu� medios de pago aceptan?</summary><p>Transferencias por Mercado Pago al alias informado en el carrito.</p></details>
+      <details><summary>�Cu�nto demora la entrega?</summary><p>La entrega se coordina luego de verificar el comprobante de pago.</p></details>
+      <details><summary>�Tiene garant�a?</summary><p>La garant�a vigente es de 24 horas, seg�n los t�rminos y condiciones.</p></details>
+    </div>
+    <div class="info-panel" id="contacto">
+      <h2>CONTACTO</h2>
+      <div class="contact-list">
+        <p>Respondemos consultas y coordinamos entregas por WhatsApp.</p>
+        <a href="https://wa.me/5491170611914" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <p>Horario de atenci�n: todos los d�as, 10:00 a 22:00.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-badge">LP</div>
+        <div class="logo-text">
+          <span class="low">LOW</span><span class="price">PRICE</span>
+          <span class="logo-sub">GAMING</span>
+        </div>
+      </div>
+      <p>Juegos digitales al mejor precio. Rápido, seguro y confiable.</p>
+      <div class="footer-social">
+        <span>◐</span><span>◑</span><span>◒</span><span>◓</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h5>ENLACES RÁPIDOS</h5>
+      <ul>
+        <li><a href="#">Sobre nosotros</a></li>
+        <li><a data-scroll="#ayuda">Preguntas frecuentes</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><button id="terms-link">Términos y condiciones</button></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>CATEGORÍAS</h5>
+      <ul>
+        <li><a data-scroll="#catalogo">PC</a></li>
+        <li><a data-scroll="#catalogo">Xbox</a></li>
+        <li><a data-scroll="#catalogo">Ofertas</a></li>
+        <li><a data-scroll="#catalogo">Ver todas</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>SOPORTE</h5>
+      <ul>
+        <li><a href="https://wa.me/5491170611914" target="_blank" rel="noopener">Soporte 24/7</a></li>
+        <li><a data-scroll="#contacto">Contacto</a></li>
+        <li><a href="#">Métodos de pago</a></li>
+        <li><a href="#">Cómo comprar</a></li>
+      </ul>
+      <div>
+        <h5 style="margin-top:22px;">MÉTODOS DE PAGO</h5>
+        <div class="payment-icons">
+          <span>VISA</span><span>MC</span><span>MP</span><span>🏦</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2024 LowPrice Gaming. Todos los derechos reservados.</span>
+    <div class="region-pill">🇦🇷 Argentina (ARS $) ⌄</div>
+  </div>
+</footer>
+
+<script>
+  /* ================= THEME ================= */
+  const root = document.documentElement;
+  const themeBtn = document.getElementById("theme-toggle");
+  function setTheme(theme){
+    root.setAttribute("data-theme", theme);
+    themeBtn.textContent = theme === "dark" ? "☾" : "☀";
+  }
+  setTheme("dark");
+  themeBtn.addEventListener("click", () => {
+    setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  });
+
+  /* ================= MOBILE NAV ================= */
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileNav = document.getElementById("mobile-nav");
+  const mobileNavOverlay = document.getElementById("mobile-nav-overlay");
+  const mobileNavClose = document.getElementById("mobile-nav-close");
+  function openMobileNav(){ mobileNav.classList.add("open"); mobileNavOverlay.classList.add("open"); }
+  function closeMobileNav(){ mobileNav.classList.remove("open"); mobileNavOverlay.classList.remove("open"); }
+  menuBtn.addEventListener("click", openMobileNav);
+  mobileNavClose.addEventListener("click", closeMobileNav);
+  mobileNavOverlay.addEventListener("click", closeMobileNav);
+
+  /* ================= SMOOTH SCROLL LINKS ================= */
+  document.querySelectorAll("[data-scroll]").forEach(el => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.querySelector(el.dataset.scroll);
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+      closeMobileNav();
+    });
+  });
+  document.getElementById("hero-cta").addEventListener("click", () => {
+    document.getElementById("catalogo").scrollIntoView({ behavior: "smooth" });
+  });
+  document.getElementById("categorias-btn").addEventListener("click", () => {
+    document.getElementById("catalogo").scrollIntoView({ behavior: "smooth" });
+  });
+
+  /* ================= NEWSLETTER ================= */
+  const newsletterForm = document.getElementById("newsletter-form");
+  const newsletterEmail = document.getElementById("newsletter-email");
+  const newsletterStatus = document.getElementById("newsletter-status");
+  const savedNewsletterEmail = localStorage.getItem("lowprice-newsletter-email");
+
+  function showNewsletterStatus(message, type){
+    newsletterStatus.textContent = message;
+    newsletterStatus.className = `newsletter-status ${type}`;
+  }
+
+  if (savedNewsletterEmail){
+    newsletterEmail.value = savedNewsletterEmail;
+    showNewsletterStatus("Ya estás suscripto. Te avisaremos cuando haya nuevas ofertas.", "success");
+  }
+
+  newsletterForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const email = newsletterEmail.value.trim();
+
+    if (!newsletterForm.checkValidity()){
+      newsletterForm.reportValidity();
+      showNewsletterStatus("Ingresá un email válido para suscribirte.", "error");
+      return;
+    }
+
+    localStorage.setItem("lowprice-newsletter-email", email);
+    newsletterEmail.value = email;
+    showNewsletterStatus("¡Listo! Te suscribimos a las mejores ofertas.", "success");
+  });
+
+  /* ================= TERMS MODAL ================= */
+  const termsOverlay = document.getElementById("terms-overlay");
+  function openTerms(){ closeMobileNav(); termsOverlay.classList.add("open"); }
+  document.getElementById("terms-link").addEventListener("click", openTerms);
+  document.getElementById("terms-link-nav").addEventListener("click", openTerms);
+  document.getElementById("mobile-terms-link").addEventListener("click", openTerms);
+  document.getElementById("terms-close").addEventListener("click", () => termsOverlay.classList.remove("open"));
+  termsOverlay.addEventListener("click", e => { if (e.target === termsOverlay) termsOverlay.classList.remove("open"); });
+
+  /* ================= PRODUCTS (catálogo completo de Soldatech) ================= */
+  let products = [];
+
+  const saleTitles = [
+    "The Last of Us Bundle","Marvels Spider-Man 2 Digital Deluxe Edition","Black Myth: Wukong Deluxe Edition",
+    "God Of War","Halo: The Master Chief Collection","Resident Evil 4 Remake Gold Edition","Red Dead Redemption",
+    "Assassins Creed Shadows Digital Deluxe Edition","Red Dead Redemption 2","GTA V Premium Edition",
+  ];
+
+  const fmt = n => "ARS $" + Math.round(n).toLocaleString("es-AR");
+  const grid = document.getElementById("product-grid");
+  const countLabel = document.getElementById("product-count");
+  const tabs = document.querySelectorAll(".tab");
+  const MERCADOPAGO_CHECKOUT_URL = "";
+  const MERCADOPAGO_ALIAS = "Txs1234";
+  const MERCADOPAGO_HOLDER = "Patricio Nicolas Delgado";
+  const WHATSAPP_NUMBER = "5491170611914";
+  let cart = [];
+  let currentPlatform = "pc";
+  let searchQuery = "";
+  let sortOrder = "default";
+  let genreFilter = "all";
+  let priceFilter = "all";
+
+  /* ---- covers / monograms ---- */
+  const swatches = ["cover-0","cover-1","cover-2","cover-3","cover-4","cover-5","cover-6","cover-7","cover-8","cover-9"];
+  function coverClass(title){
+    let sum = 0;
+    for (let i = 0; i < title.length; i++) sum += title.charCodeAt(i);
+    return swatches[sum % swatches.length];
+  }
+  function monogram(title){
+    const stop = ["the","of","and","a","el","la","de","y"];
+    const words = title.replace(/[^a-zA-Z0-9\s]/g,"").split(/\s+/).filter(w => w && !stop.includes(w.toLowerCase()));
+    if (words.length === 0) return title.slice(0,2).toUpperCase();
+    if (words.length === 1) return words[0].slice(0,2).toUpperCase();
+    return (words[0][0] + words[1][0]).toUpperCase();
+  }
+
+  function buildCover(p){
+    const wrap = document.createElement("div");
+    wrap.className = "game-cover " + coverClass(p.title);
+    if (p.appid){
+      const img = document.createElement("img");
+      img.src = `https://cdn.akamai.steamstatic.com/steam/apps/${p.appid}/header.jpg`;
+      img.alt = p.title;
+      img.loading = "lazy";
+      img.addEventListener("load", () => {
+        if (p.imgOk !== true){ p.imgOk = true; scheduleRerender(); }
+      });
+      img.addEventListener("error", () => {
+        img.remove();
+        wrap.textContent = monogram(p.title);
+        if (p.imgOk !== false){ p.imgOk = false; scheduleRerender(); }
+      });
+      wrap.appendChild(img);
+    } else {
+      wrap.textContent = monogram(p.title);
+    }
+    return wrap;
+  }
+
+  /* ---- descriptions ---- */
+  const descIntros = [
+    t => `Activá ${t} en cuenta NFA y jugalo hoy mismo.`,
+    t => `Clave digital de ${t}, entrega y activación al instante.`,
+    t => `Sumá ${t} a tu backlog sin pagar el precio completo.`,
+    t => `Acceso NFA a ${t}, listo para instalar y jugar.`,
+    t => `${t} disponible ahora, activación inmediata tras la compra.`,
+    t => `Conseguí ${t} al toque, sin esperas ni vueltas.`,
+    t => `Entrada directa a ${t} mediante cuenta compartida NFA.`,
+    t => `${t} a un clic: pagás, activás y jugás.`,
+  ];
+  const descMids = [
+    "Ideal para arrancar sin comprometer una cuenta propia.",
+    "Perfecto si querés probarlo antes de invertir a precio completo.",
+    "Acceso estable, pensado para partidas largas sin sobresaltos.",
+    "Activación guiada paso a paso, sin complicaciones.",
+    "Soporte post-venta si te surge cualquier duda con la activación.",
+    "Rendimiento igual al original, solo cambia el tipo de acceso.",
+    "Se descarga desde la plataforma oficial, cero riesgo de baneo por el juego en sí.",
+    "Recomendado para quienes buscan ahorrar sin resignar calidad.",
+  ];
+  const descOutros = [
+    "Stock limitado, se actualiza según demanda.",
+    "Consultanos por combos con otros títulos.",
+    "Pago simple, activación el mismo día.",
+    "Métodos de pago flexibles disponibles.",
+    "Entrega coordinada apenas se confirma el pedido.",
+    "Ideal para sumar horas de juego sin gastar de más.",
+  ];
+  function hashStr(s){ let h = 0; for (let i=0;i<s.length;i++) h = (h*31 + s.charCodeAt(i)) >>> 0; return h; }
+  function describe(title){
+    const h = hashStr(title);
+    const i1 = h % descIntros.length;
+    const i2 = Math.floor(h / descIntros.length) % descMids.length;
+    const i3 = Math.floor(h / (descIntros.length * descMids.length)) % descOutros.length;
+    return `${descIntros[i1](title)} ${descMids[i2]} ${descOutros[i3]}`;
+  }
+
+  /* ---- cart ---- */
+  function updateCartCount(){
+    const count = cart.reduce((s,i) => s + i.qty, 0);
+    document.getElementById("cart-count").textContent = count;
+    document.getElementById("mobile-cart-count").textContent = count;
+  }
+  function addToCart(p){
+    const existing = cart.find(i => i.title === p.title && i.platform === p.platform);
+    if (existing) existing.qty++;
+    else cart.push({ title: p.title, platform: p.platform, price: p.price, appid: p.appid, qty: 1 });
+    updateCartCount();
+  }
+
+  function renderCart(){
+    const box = document.getElementById("cart-content");
+    box.innerHTML = "";
+    if (cart.length === 0){
+      box.innerHTML = `<div class="cart-empty">Tu carrito está vacío.<br>Agregá juegos desde el catálogo.</div>`;
+      return;
+    }
+    let total = 0;
+    cart.forEach((item, idx) => {
+      total += item.price * item.qty;
+      const row = document.createElement("div");
+      row.className = "cart-item";
+
+      const thumb = document.createElement("div");
+      thumb.className = "thumb-mini " + coverClass(item.title);
+      if (item.appid){
+        const img = document.createElement("img");
+        img.src = `https://cdn.akamai.steamstatic.com/steam/apps/${item.appid}/header.jpg`;
+        img.addEventListener("error", () => { img.remove(); thumb.textContent = monogram(item.title); });
+        thumb.appendChild(img);
+      } else {
+        thumb.textContent = monogram(item.title);
+      }
+      row.appendChild(thumb);
+
+      const info = document.createElement("div");
+      info.className = "cart-item-info";
+      info.innerHTML = `<h4>${item.title}</h4><span>${item.platform}</span>`;
+      row.appendChild(info);
+
+      const qtyWrap = document.createElement("div");
+      qtyWrap.className = "qty-control";
+      qtyWrap.innerHTML = `<button class="qty-btn" aria-label="Restar">−</button><span>${item.qty}</span><button class="qty-btn" aria-label="Sumar">+</button>`;
+      const [decBtn, incBtn] = qtyWrap.querySelectorAll(".qty-btn");
+      decBtn.addEventListener("click", () => { item.qty--; if (item.qty <= 0) cart.splice(idx,1); updateCartCount(); renderCart(); });
+      incBtn.addEventListener("click", () => { item.qty++; updateCartCount(); renderCart(); });
+      row.appendChild(qtyWrap);
+
+      const priceEl = document.createElement("div");
+      priceEl.className = "cart-item-price";
+      priceEl.textContent = fmt(item.price * item.qty);
+      row.appendChild(priceEl);
+
+      const removeBtn = document.createElement("button");
+      removeBtn.className = "cart-remove";
+      removeBtn.setAttribute("aria-label","Quitar");
+      removeBtn.textContent = "✕";
+      removeBtn.addEventListener("click", () => { cart.splice(idx,1); updateCartCount(); renderCart(); });
+      row.appendChild(removeBtn);
+
+      box.appendChild(row);
+    });
+
+    const notice = document.createElement("div");
+    notice.className = "cart-notice";
+    notice.innerHTML = `
+      <p><strong style="color:var(--white);">NFA (Not Full Access):</strong> activás en una cuenta que no es 100% tuya, con acceso limitado.</p>
+      <ul>
+        <li>• Si cambiás la contraseña o modificás cualquier dato de la cuenta, el acceso se pierde automáticamente y no nos hacemos responsables.</li>
+        <li>• Garantía de 24 horas desde el momento de la compra.</li>
+        <li>• No se puede vincular métodos de pago propios ni usar la recuperación de cuenta.</li>
+        <li>• No incluye transferencia de propiedad del juego ni logros vinculados a una cuenta personal.</li>
+      </ul>`;
+    box.appendChild(notice);
+
+    const footer = document.createElement("div");
+    footer.className = "cart-footer";
+    footer.innerHTML = `<span class="cart-total">${fmt(total)}</span>`;
+    const checkoutBtn = document.createElement("button");
+    checkoutBtn.className = "checkout-btn";
+    checkoutBtn.textContent = "Pagar con Mercado Pago";
+    checkoutBtn.addEventListener("click", () => {
+      if (!MERCADOPAGO_CHECKOUT_URL){
+        checkoutBtn.disabled = true;
+        checkoutBtn.textContent = "Datos de pago listos";
+        const paymentData = document.createElement("div");
+        paymentData.className = "payment-data";
+        paymentData.innerHTML = `<strong>Transferencia por Mercado Pago</strong><br>Alias: <strong>${MERCADOPAGO_ALIAS}</strong><br>Titular: ${MERCADOPAGO_HOLDER}<br>Total: <strong>${fmt(total)}</strong><br><button type="button" id="copy-alias">Copiar alias</button><label class="payment-proof">Comprobante (captura o PDF)<input type="file" id="payment-proof" accept="image/*,.pdf"></label>`;
+        box.appendChild(paymentData);
+        paymentData.querySelector("#copy-alias").addEventListener("click", async () => {
+          await navigator.clipboard.writeText(MERCADOPAGO_ALIAS);
+          paymentData.querySelector("#copy-alias").textContent = "Alias copiado";
+        });
+
+        const whatsappBtn = document.createElement("button");
+        whatsappBtn.className = "checkout-btn";
+        whatsappBtn.style.marginTop = "10px";
+        whatsappBtn.textContent = "Ya pagué, enviar por WhatsApp";
+        whatsappBtn.addEventListener("click", () => {
+          const proof = paymentData.querySelector("#payment-proof").files[0];
+          if (!proof){
+            paymentData.querySelector("#payment-proof").reportValidity();
+            return;
+          }
+          let msg = "¡Hola! Ya pagué por Mercado Pago:%0A%0A";
+          cart.forEach(item => { msg += `• ${item.title} (${item.platform}) x${item.qty} — ${fmt(item.price * item.qty)}%0A`; });
+          msg += `%0ATotal: ${fmt(total)}%0AAlias utilizado: ${MERCADOPAGO_ALIAS}%0AComprobante: ${encodeURIComponent(proof.name)}%0A(Adjuntar la captura o PDF en este chat)`;
+          window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank", "noopener");
+          box.innerHTML = `<div class="cart-empty">Pedido enviado por WhatsApp. Te contactaremos para coordinar la entrega.</div>`;
+          cart = [];
+          updateCartCount();
+        });
+        box.appendChild(whatsappBtn);
+        return;
+      }
+
+      window.open(MERCADOPAGO_CHECKOUT_URL, "_blank", "noopener");
+      checkoutBtn.disabled = true;
+      checkoutBtn.textContent = "Pago abierto en Mercado Pago";
+
+      const whatsappBtn = document.createElement("button");
+      whatsappBtn.className = "checkout-btn";
+      whatsappBtn.style.marginTop = "10px";
+      whatsappBtn.textContent = "Ya pagué, enviar por WhatsApp";
+      whatsappBtn.addEventListener("click", () => {
+        let msg = "¡Hola! Ya pagué este pedido en Mercado Pago:%0A%0A";
+        cart.forEach(item => { msg += `• ${item.title} (${item.platform}) x${item.qty} — ${fmt(item.price * item.qty)}%0A`; });
+        msg += `%0ATotal: ${fmt(total)}`;
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank", "noopener");
+        box.innerHTML = `<div class="cart-empty">Pedido enviado por WhatsApp. Te contactaremos para coordinar la entrega.</div>`;
+        cart = [];
+        updateCartCount();
+      });
+      footer.appendChild(whatsappBtn);
+    });
+    footer.appendChild(checkoutBtn);
+    box.appendChild(footer);
+  }
+
+  const cartOverlay = document.getElementById("cart-overlay");
+  function openCart(){ renderCart(); cartOverlay.classList.add("open"); }
+  document.getElementById("cart-btn").addEventListener("click", openCart);
+  document.getElementById("mobile-cart-link").addEventListener("click", () => { closeMobileNav(); openCart(); });
+  document.getElementById("cart-close").addEventListener("click", () => cartOverlay.classList.remove("open"));
+  cartOverlay.addEventListener("click", e => { if (e.target === cartOverlay) cartOverlay.classList.remove("open"); });
+
+  /* ---- product modal ---- */
+  const modalOverlay = document.getElementById("modal-overlay");
+  const modalContent = document.getElementById("modal-content");
+  function openModal(p, onSale){
+    modalContent.innerHTML = "";
+    modalContent.appendChild(buildCover(p));
+    if (onSale){
+      const badge = document.createElement("div");
+      badge.className = "discount-badge";
+      badge.textContent = "-" + Math.round((1 - p.price / p.old) * 100) + "%";
+      modalContent.firstChild.appendChild(badge);
+    }
+    const platBadge = document.createElement("div");
+    platBadge.className = "platform-badge";
+    platBadge.textContent = p.platform;
+    modalContent.firstChild.appendChild(platBadge);
+
+    const body = document.createElement("div");
+    body.className = "modal-body";
+    body.innerHTML = `
+      <h3>${p.title}</h3>
+      <p class="desc">${describe(p.title)}</p>
+      <div class="stub">
+        <div>
+          ${onSale ? `<div class="price-old">${fmt(p.old)}</div>` : ''}
+          <div class="price-now" style="font-size:20px;">${fmt(p.price)}</div>
+        </div>
+        <button class="btn-buy">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          COMPRAR
+        </button>
+      </div>`;
+    modalContent.appendChild(body);
+    body.querySelector(".btn-buy").addEventListener("click", () => addToCart(p));
+    modalOverlay.classList.add("open");
+  }
+  document.getElementById("modal-close").addEventListener("click", () => modalOverlay.classList.remove("open"));
+  modalOverlay.addEventListener("click", e => { if (e.target === modalOverlay) modalOverlay.classList.remove("open"); });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape"){
+      modalOverlay.classList.remove("open");
+      cartOverlay.classList.remove("open");
+      termsOverlay.classList.remove("open");
+      closeMobileNav();
+    }
+  });
+
+  /* ---- render catalog ---- */
+  let rerenderTimer = null;
+  function scheduleRerender(){
+    // Reordena la grilla una vez que se van confirmando imágenes cargadas,
+    // agrupando varias confirmaciones en un solo re-render (evita parpadeos).
+    if (rerenderTimer) return;
+    rerenderTimer = setTimeout(() => { rerenderTimer = null; renderPlatform(); }, 400);
+  }
+
+  function renderPlatform(){
+    let list = products.filter(p => p.platform.toLowerCase() === currentPlatform);
+
+    if (searchQuery.trim()){
+      const q = searchQuery.trim().toLowerCase();
+      list = list.filter(p => p.title.toLowerCase().includes(q));
+    }
+    if (genreFilter !== "all") list = list.filter(p => p.genre === genreFilter);
+    if (priceFilter !== "all"){
+      const [min, max] = priceFilter.split("-").map(Number);
+      list = list.filter(p => p.price >= min && p.price <= max);
+    }
+    if (sortOrder === "price-asc") list = list.slice().sort((a,b) => a.price - b.price);
+    else if (sortOrder === "price-desc") list = list.slice().sort((a,b) => b.price - a.price);
+
+    // Los juegos con imagen (portada de Steam) confirmada van primero,
+    // luego los que todavía no confirmaron (pero tienen appid para intentar
+    // cargar), y al final los que no tienen imagen. Sort estable, así que
+    // dentro de cada grupo se conserva el orden previo (relevancia o precio).
+    const canHaveImg = p => !!p.appid;
+    function imgScore(p){
+      if (p.imgOk === true) return 2;   // imagen confirmada arriba de todo
+      if (p.imgOk === false) return 0;  // confirmado que no tiene imagen, al final
+      return canHaveImg(p) ? 1 : 0;     // aún sin confirmar: en el medio si tiene appid
+    }
+    list = list.slice().sort((a,b) => imgScore(b) - imgScore(a));
+
+    grid.innerHTML = "";
+    countLabel.textContent = list.length + " productos";
+
+    if (list.length === 0){
+      grid.innerHTML = `<p class="empty-msg">No encontramos juegos que coincidan con la búsqueda.</p>`;
+      return;
+    }
+
+    list.forEach(p => {
+      const onSale = saleTitles.includes(p.title);
+      const card = document.createElement("div");
+      card.className = "game-card";
+
+      const cover = buildCover(p);
+      if (onSale){
+        const badge = document.createElement("div");
+        badge.className = "discount-badge";
+        badge.textContent = "-" + Math.round((1 - p.price / p.old) * 100) + "%";
+        cover.appendChild(badge);
+      }
+      const platBadge = document.createElement("div");
+      platBadge.className = "platform-badge";
+      platBadge.textContent = p.platform;
+      cover.appendChild(platBadge);
+      card.appendChild(cover);
+
+      const info = document.createElement("div");
+      info.className = "game-info";
+      info.innerHTML = `
+        <h3>${p.title}</h3>
+        <div class="price-row">
+          <span class="price-now">${fmt(p.price)}</span>
+          ${onSale ? `<span class="price-old">${fmt(p.old)}</span>` : ''}
+        </div>
+        <button class="btn-buy">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          COMPRAR
+        </button>`;
+      card.appendChild(info);
+
+      info.querySelector(".btn-buy").addEventListener("click", (e) => { e.stopPropagation(); addToCart(p); });
+      card.addEventListener("click", () => openModal(p, onSale));
+
+      grid.appendChild(card);
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      currentPlatform = tab.dataset.platform;
+      renderPlatform();
+    });
+  });
+
+  let searchDebounce;
+  function wireSearch(input){
+    input.addEventListener("input", (e) => {
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(() => {
+        searchQuery = e.target.value;
+        document.getElementById("catalog-search").value = searchQuery;
+        document.getElementById("header-search").value = searchQuery;
+        renderPlatform();
+        if (searchQuery.trim()) document.getElementById("catalogo").scrollIntoView({ behavior:"smooth" });
+      }, 150);
+    });
+  }
+  wireSearch(document.getElementById("catalog-search"));
+  wireSearch(document.getElementById("header-search"));
+
+  document.getElementById("sort-select").addEventListener("change", (e) => {
+    sortOrder = e.target.value;
+    renderPlatform();
+  });
+  document.getElementById("genre-filter").addEventListener("change", (e) => {
+    genreFilter = e.target.value;
+    renderPlatform();
+  });
+  document.getElementById("price-filter").addEventListener("change", (e) => {
+    priceFilter = e.target.value;
+    renderPlatform();
+  });
+
+  /* ---- Steam appid autolookup (best-effort, silent fallback) ---- */
+  const CORS_WRAPPERS = [
+    url => url,
+    url => "https://api.codetabs.com/v1/proxy?quest=" + encodeURIComponent(url),
+    url => "https://api.allorigins.win/raw?url=" + encodeURIComponent(url),
+    url => "https://corsproxy.io/?url=" + encodeURIComponent(url),
+  ];
+  async function fetchJsonWithProxies(url, timeoutMs){
+    for (const wrap of CORS_WRAPPERS){
+      try{
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), timeoutMs);
+        const res = await fetch(wrap(url), { signal: controller.signal });
+        clearTimeout(timer);
+        if (!res.ok) continue;
+        return await res.json();
+      } catch(e){ continue; }
+    }
+    return null;
+  }
+  async function fetchAppId(title){
+    const url = `https://store.steampowered.com/api/storesearch/?term=${encodeURIComponent(title)}&l=english&cc=us`;
+    const data = await fetchJsonWithProxies(url, 6000);
+    if (data && Array.isArray(data.items) && data.items.length > 0) return data.items[0].id;
+    return null;
+  }
+  async function assignAppIds(onBatchDone){
+    const pending = products.filter(p => !p.appid);
+    const concurrency = 5;
+    let idx = 0, done = 0;
+    async function worker(){
+      while (idx < pending.length){
+        const p = pending[idx++];
+        const id = await fetchAppId(p.title);
+        if (id) p.appid = id;
+        done++;
+        if (done % 15 === 0 && onBatchDone) onBatchDone();
+      }
+    }
+    await Promise.all(Array.from({ length: concurrency }, worker));
+  }
+
+  function inferGenre(title){
+    const value = title.toLowerCase();
+    if (/fifa|fc |nba|ufc|wwe|f1 |need for speed|forza|crew|assetto|truck|farming/.test(value)) return "Deportes y carreras";
+    if (/resident evil|silent hill|outlast|phasmophobia|dead by daylight|dead space|lethal company/.test(value)) return "Terror";
+    if (/civilization|age of empires|hearts of iron|stellaris|crusader kings|total war|manor lords/.test(value)) return "Estrategia";
+    if (/stardew|terraria|factorio|rimworld|cities|minecraft|sims|house flipper/.test(value)) return "Simulacion";
+    if (/dragon ball|naruto|persona|final fantasy|monster hunter|devil may cry|tekken|street fighter|mortal kombat/.test(value)) return "RPG y lucha";
+    if (/gta|red dead|cyberpunk|witcher|elden ring|hogwarts|assassin|baldur|god of war|horizon|batman|spider-man/.test(value)) return "Accion y aventura";
+    if (/counter|call of duty|battlefield|arma|squad|insurgency|payday|hell let loose|escape from tarkov/.test(value)) return "Accion";
+    return "Otros";
+  }
+
+  async function loadProducts(){
+    try{
+      const response = await fetch("backend.json", { cache: "no-store" });
+      if (!response.ok) throw new Error("No se pudo cargar backend.json");
+      const data = await response.json();
+      products = Array.isArray(data.products) ? data.products : [];
+      products.forEach(product => { if (!product.genre) product.genre = inferGenre(product.title); });
+      const genres = [...new Set(products.map(product => product.genre))].sort();
+      const genreSelect = document.getElementById("genre-filter");
+      genres.forEach(genre => genreSelect.insertAdjacentHTML("beforeend", `<option value="${genre}">${genre}</option>`));
+      renderPlatform();
+      assignAppIds(() => renderPlatform()).then(() => renderPlatform());
+    } catch(error){
+      grid.innerHTML = `<p class="empty-msg">No se pudo cargar el cat�logo. Abr� el proyecto desde un servidor local para usar backend.json.</p>`;
+      countLabel.textContent = "Cat�logo no disponible";
+    }
+  }
+
+  loadProducts();
+</script>
+
+</body>
+</html>
+
+
