@@ -593,8 +593,8 @@
     border-radius:10px;
   }
 
-  @media (max-width:1080px){ .game-grid, .upcoming-grid{grid-template-columns:repeat(3,1fr);} }
-  @media (max-width:640px){ .game-grid, .upcoming-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:1080px){ .game-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:640px){ .game-grid{grid-template-columns:repeat(2,1fr);} }
 
   /* cover gradients (placeholders, no copyrighted art) */
   .cover-0{background:linear-gradient(160deg,#3a2f1e,#0e0d0a 70%);}
@@ -607,44 +607,6 @@
   .cover-7{background:linear-gradient(160deg,#402a12,#100a03 70%);}
   .cover-8{background:linear-gradient(160deg,#1a2a2a,#050c0c 70%);}
   .cover-9{background:linear-gradient(160deg,#33131f,#0d0409 70%);}
-
-  /* ---------- UPCOMING ---------- */
-  .upcoming-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:20px;
-  }
-  .upcoming-card{
-    position:relative;
-    border-radius:10px;
-    overflow:hidden;
-    aspect-ratio:3/4;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    padding:16px;
-    border:1px solid var(--border);
-  }
-  .upcoming-card h4{
-    font-size:14px;
-    font-weight:800;
-    text-shadow:0 2px 6px rgba(0,0,0,0.7);
-  }
-  .upcoming-card span{
-    font-size:12px;
-    color:var(--gray);
-    font-weight:600;
-    margin-top:2px;
-  }
-  .heart{
-    position:absolute;
-    top:12px; right:12px;
-    width:30px; height:30px;
-    border-radius:50%;
-    background:rgba(0,0,0,0.5);
-    display:flex; align-items:center; justify-content:center;
-    color:#fff;
-  }
 
   /* ---------- NEWSLETTER ---------- */
   .newsletter{
@@ -935,7 +897,6 @@
   <ul>
     <li><a data-scroll="#catalogo">Juegos</a></li>
     <li><a data-scroll="#catalogo">Ofertas</a></li>
-    <li><a data-scroll="#proximos">Próximos lanzamientos</a></li>
     <li><a id="mobile-terms-link">Términos y condiciones</a></li>
     <li><a id="mobile-cart-link">Carrito (<span id="mobile-cart-count">0</span>)</a></li>
   </ul>
@@ -972,7 +933,6 @@
       <li class="active"><a href="#">INICIO</a></li>
       <li><a data-scroll="#catalogo">JUEGOS</a></li>
       <li><a data-scroll="#catalogo">OFERTAS</a></li>
-      <li><a data-scroll="#proximos">PRÓXIMOS LANZAMIENTOS</a></li>
       <li><a id="terms-link-nav">TÉRMINOS</a></li>
       <li><a href="#">SOPORTE</a></li>
     </ul>
@@ -1069,57 +1029,6 @@
   </div>
 
   <div class="game-grid" id="product-grid"></div>
-</div>
-
-<!-- PROXIMOS LANZAMIENTOS -->
-<div class="section" id="proximos">
-  <div class="section-head">
-    <h2>PRÓXIMOS LANZAMIENTOS</h2>
-    <span class="ver-todas">VER TODOS</span>
-  </div>
-  <div class="upcoming-grid">
-
-    <div class="upcoming-card cover-0">
-      <div class="heart">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
-      </div>
-      <h4>Grand Theft Auto VI</h4>
-      <span>2025</span>
-    </div>
-
-    <div class="upcoming-card cover-6">
-      <div class="heart">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
-      </div>
-      <h4>Marvel's Wolverine</h4>
-      <span>2025</span>
-    </div>
-
-    <div class="upcoming-card cover-8">
-      <div class="heart">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
-      </div>
-      <h4>S.T.A.L.K.E.R. 2</h4>
-      <span>5 SEP 2024</span>
-    </div>
-
-    <div class="upcoming-card cover-9">
-      <div class="heart">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
-      </div>
-      <h4>Assassin's Creed Shadows</h4>
-      <span>15 NOV 2024</span>
-    </div>
-
-    <div class="upcoming-card cover-7">
-      <div class="heart">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
-      </div>
-      <h4>Kingdom Come: Deliverance II</h4>
-      <span>11 FEB 2025</span>
-    </div>
-
-  </div>
 </div>
 
 <!-- NEWSLETTER -->
@@ -1443,7 +1352,7 @@
   function buildCover(p){
     const wrap = document.createElement("div");
     wrap.className = "game-cover " + coverClass(p.title);
-    if (p.platform === "PC" && p.appid){
+    if (p.appid){
       const img = document.createElement("img");
       img.src = `https://cdn.akamai.steamstatic.com/steam/apps/${p.appid}/header.jpg`;
       img.alt = p.title;
@@ -1529,7 +1438,7 @@
 
       const thumb = document.createElement("div");
       thumb.className = "thumb-mini " + coverClass(item.title);
-      if (item.platform === "PC" && item.appid){
+      if (item.appid){
         const img = document.createElement("img");
         img.src = `https://cdn.akamai.steamstatic.com/steam/apps/${item.appid}/header.jpg`;
         img.addEventListener("error", () => { img.remove(); thumb.textContent = monogram(item.title); });
@@ -1676,7 +1585,7 @@
     // luego los que todavía no confirmaron (pero tienen appid para intentar
     // cargar), y al final los que no tienen imagen. Sort estable, así que
     // dentro de cada grupo se conserva el orden previo (relevancia o precio).
-    const canHaveImg = p => p.platform === "PC" && !!p.appid;
+    const canHaveImg = p => !!p.appid;
     function imgScore(p){
       if (p.imgOk === true) return 2;   // imagen confirmada arriba de todo
       if (p.imgOk === false) return 0;  // confirmado que no tiene imagen, al final
@@ -1788,7 +1697,7 @@
     return null;
   }
   async function assignAppIds(onBatchDone){
-    const pending = products.filter(p => p.platform === "PC" && !p.appid);
+    const pending = products.filter(p => !p.appid);
     const concurrency = 5;
     let idx = 0, done = 0;
     async function worker(){
